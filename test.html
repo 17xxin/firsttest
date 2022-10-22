@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function resutl(tt){
+            var num1 = document.getElementById("tes1").value  
+            var num2 = document.getElementById("tes2").value
+            // var num1 = parseInt(document.getElementById("tes1").value)  
+            // var num2 = parseInt(document.getElementById("tes2").value)
+            var rtt=0
+            switch(tt){
+                case "+":
+                rtt =  parseInt(num1) + parseInt(num2) ;
+                    break;
+                case "-":
+                rtt = parseInt(num1) - parseInt(num2);
+                    break;
+                case "*":
+                rtt = parseInt(num1) * parseInt(num2);
+                    break;
+                case "/":
+                rtt = parseInt(num1) / parseInt(num2);
+                    break;
+                default:
+                    alert("您输入的数值有误")
+                    break;
+            }
+            document.getElementById("res").value=rtt;
+
+        }
+
+    </script>
+
+</head>
+<body >
+    <form >
+        第一个数：<input id="tes1" type="text"><br>
+        第二个数：<input id="tes2" type="text"><br>
+        <input type="button" value="+" onclick="resutl('+');">
+        <input type="button" value="-" onclick="resutl('-');">
+        <input type="button" value="*" onclick="resutl('*');">
+        <input type="button" value="/" onclick="resutl('/');"><br>
+        结果是：<input id="res" type="text">
+    </form>
+
+
+</body>
+</html>
